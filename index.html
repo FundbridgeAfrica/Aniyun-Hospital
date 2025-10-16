@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniyun Hospital - World-Class Care in Lagos</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS (Animate On Scroll) Library for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#005792', // A professional, calming blue
+                            dark: '#003d66',
+                        },
+                        secondary: '#F4F7F9', // A very light grey for backgrounds
+                        accent: {
+                            DEFAULT: '#FD7F20', // A warm, hopeful orange
+                            hover: '#e8731d',
+                        },
+                        emergency: '#D93F3F', // A calm but noticeable red
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        /* Smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom styles for subtle animations and hero background */
+        .hero-section {
+            background: linear-gradient(rgba(0, 87, 146, 0.7), rgba(0, 61, 102, 0.8)), url('https://placehold.co/1600x900/e0e0e0/ffffff?text=Caring+Doctor-Patient+Interaction') no-repeat center center;
+            background-size: cover;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.75rem;
+            margin-bottom: 2rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #FD7F20;
+            border-radius: 2px;
+        }
+        .shadow-text {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-800 antialiased">
+
+    <!-- Emergency Top Bar -->
+    <div id="emergency-bar" class="bg-emergency text-white py-2 px-4 md:px-8 shadow-md">
+        <div class="container mx-auto flex justify-between items-center text-sm md:text-base">
+            <p class="font-semibold">
+                <i class="fas fa-kit-medical mr-2"></i>
+                Emergency Hotline
+            </p>
+            <a href="tel:08183696538" class="font-bold tracking-wider text-base md:text-lg hover:underline">
+                <i class="fas fa-phone-volume mr-1 md:mr-2"></i>0818 369 6538
+            </a>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary-dark">
+                <i class="fas fa-hospital-user mr-2 text-primary"></i>Aniyun Hospital
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#services" class="text-gray-600 hover:text-primary font-medium transition duration-300">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-primary font-medium transition duration-300">About Us</a>
+                <a href="#doctors" class="text-gray-600 hover:text-primary font-medium transition duration-300">Our Doctors</a>
+                <a href="#contact" class="text-gray-600 hover:text-primary font-medium transition duration-300">Contact</a>
+                <a href="#contact" class="bg-accent hover:bg-accent-hover text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+                    Book Appointment
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-primary-dark text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#services" class="block py-3 px-6 text-gray-700 hover:bg-secondary">Services</a>
+            <a href="#about" class="block py-3 px-6 text-gray-700 hover:bg-secondary">About Us</a>
+            <a href="#doctors" class="block py-3 px-6 text-gray-700 hover:bg-secondary">Our Doctors</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-700 hover:bg-secondary">Contact</a>
+            <a href="#contact" class="block py-4 px-6 text-center bg-accent text-white font-bold w-full">Book Appointment</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section text-white py-24 md:py-32">
+            <div class="container mx-auto text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight shadow-text" data-aos="fade-up">Your Health. Our Commitment.</h1>
+                <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200" data-aos="fade-up" data-aos-delay="200">
+                    Providing world-class, compassionate general medicine in the heart of Lagos.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#contact" class="bg-accent hover:bg-accent-hover text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+                        Book an Appointment
+                    </a>
+                    <a href="#services" class="bg-white/20 backdrop-blur-sm border-2 border-white hover:bg-white/30 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+                        Explore Our Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="py-16 bg-secondary">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-4xl text-primary mb-4"><i class="fas fa-user-doctor"></i></div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-2">Expert Medical Team</h3>
+                        <p class="text-gray-600">Our experienced doctors are dedicated to providing the highest standard of care.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-4xl text-primary mb-4"><i class="fas fa-heart-pulse"></i></div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-2">Patient-Centered Approach</h3>
+                        <p class="text-gray-600">We listen, we care, and we create personalized treatment plans for you.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-4xl text-primary mb-4"><i class="fas fa-laptop-medical"></i></div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-2">Modern Facilities</h3>
+                        <p class="text-gray-600">Utilizing modern technology to ensure accurate diagnosis and effective treatment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-center text-primary-dark" data-aos="fade-up">Our Core Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <!-- General Medicine Card -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://placehold.co/600x400/005792/ffffff?text=General+Consultation" alt="General Medicine" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-primary-dark mb-3">General Medicine</h3>
+                            <p class="text-gray-600 mb-4">Comprehensive care for adults, focusing on the prevention, diagnosis, and treatment of a wide range of illnesses.</p>
+                            <a href="#" class="font-semibold text-accent hover:text-accent-hover">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                    <!-- Preventive Care Card -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://placehold.co/600x400/008a8a/ffffff?text=Health+Screening" alt="Preventive Care" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-primary-dark mb-3">Preventive Care</h3>
+                            <p class="text-gray-600 mb-4">Stay ahead of health issues with our routine check-ups, health screenings, and immunization programs.</p>
+                            <a href="#" class="font-semibold text-accent hover:text-accent-hover">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                    <!-- Minor Procedures Card -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://placehold.co/600x400/fd7f20/ffffff?text=Minor+Procedures" alt="Minor Procedures" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-primary-dark mb-3">Minor Procedures</h3>
+                            <p class="text-gray-600 mb-4">Safe and efficient handling of minor surgical procedures and wound care in a sterile environment.</p>
+                            <a href="#" class="font-semibold text-accent hover:text-accent-hover">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-secondary">
+             <div class="container mx-auto px-4 md:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <img src="https://placehold.co/800x600/ffffff/333333?text=Aniyun+Hospital+Facility" alt="Aniyun Hospital Facility" class="rounded-lg shadow-2xl w-full">
+                    </div>
+                    <div data-aos="fade-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">About Aniyun Hospital</h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Founded on the principle of providing accessible, high-quality healthcare to the Lagos community, Aniyun Hospital has grown into a trusted name in general medicine. Our mission is to combine medical expertise with a deep sense of compassion, ensuring every patient feels heard, respected, and cared for.
+                        </p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                           We believe in a holistic approach to health, focusing not just on treating illness but on promoting overall wellness. Our state-of-the-art facility and dedicated staff are here to support you on your journey to better health.
+                        </p>
+                        <a href="#" class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Our Story
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Section -->
+        <section id="doctors" class="py-20">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-center text-primary-dark" data-aos="fade-up">Meet Our Medical Experts</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <!-- Doctor 1 -->
+                    <div class="bg-white rounded-lg shadow-lg text-center p-8 transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://placehold.co/400x400/005792/ffffff?text=Dr.+Adebayo" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-primary" alt="Doctor Adebayo">
+                        <h3 class="text-xl font-bold text-primary-dark">Dr. Funmilayo Adebayo</h3>
+                        <p class="text-accent font-semibold mb-3">Lead Physician, General Medicine</p>
+                        <p class="text-gray-600 text-sm">With over 15 years of experience, Dr. Adebayo is a leading expert in internal medicine and patient-focused care.</p>
+                    </div>
+                    <!-- Doctor 2 -->
+                    <div class="bg-white rounded-lg shadow-lg text-center p-8 transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://placehold.co/400x400/005792/ffffff?text=Dr.+Okoro" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-primary" alt="Doctor Okoro">
+                        <h3 class="text-xl font-bold text-primary-dark">Dr. Chinedu Okoro</h3>
+                        <p class="text-accent font-semibold mb-3">Family Medicine Specialist</p>
+                        <p class="text-gray-600 text-sm">Dr. Okoro is dedicated to family health and preventive care, with a special interest in community wellness.</p>
+                    </div>
+                    <!-- Doctor 3 -->
+                    <div class="bg-white rounded-lg shadow-lg text-center p-8 transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://placehold.co/400x400/005792/ffffff?text=Dr.+Balogun" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-primary" alt="Doctor Balogun">
+                        <h3 class="text-xl font-bold text-primary-dark">Dr. Aisha Balogun</h3>
+                        <p class="text-accent font-semibold mb-3">General Practitioner</p>
+                        <p class="text-gray-600 text-sm">Dr. Balogun brings a fresh, evidence-based approach to diagnosis and treatment for all our patients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-secondary">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-center text-primary-dark" data-aos="fade-up">Patient Stories</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl text-primary opacity-50 mb-4"><i class="fas fa-quote-left"></i></div>
+                        <p class="text-gray-600 mb-6 italic">"The care I received at Aniyun Hospital was second to none. The doctors listened, and the staff were incredibly supportive throughout my treatment."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/100x100/F4F7F9/333333?text=A.O." class="w-12 h-12 rounded-full mr-4" alt="Patient A.O.">
+                            <div>
+                                <p class="font-bold text-primary-dark">Adeola O.</p>
+                                <p class="text-sm text-gray-500">Ikeja, Lagos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl text-primary opacity-50 mb-4"><i class="fas fa-quote-left"></i></div>
+                        <p class="text-gray-600 mb-6 italic">"A very clean and professional environment. I felt safe and well-cared for from the moment I walked in. Highly recommended."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/100x100/F4F7F9/333333?text=B.E." class="w-12 h-12 rounded-full mr-4" alt="Patient B.E.">
+                            <div>
+                                <p class="font-bold text-primary-dark">Bolanle E.</p>
+                                <p class="text-sm text-gray-500">Lekki, Lagos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl text-primary opacity-50 mb-4"><i class="fas fa-quote-left"></i></div>
+                        <p class="text-gray-600 mb-6 italic">"Booking an appointment was straightforward, and I was seen on time. An efficient and compassionate team."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/100x100/F4F7F9/333333?text=T.S." class="w-12 h-12 rounded-full mr-4" alt="Patient T.S.">
+                            <div>
+                                <p class="font-bold text-primary-dark">Tunde S.</p>
+                                <p class="text-sm text-gray-500">Surulere, Lagos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Location Section -->
+        <section id="contact" class="py-20 bg-primary-dark text-white">
+            <div class="container mx-auto px-4 md:px-8">
+                 <h2 class="section-title text-3xl md:text-4xl font-bold text-center" data-aos="fade-up">Contact Us & Book an Appointment</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+                    <!-- Contact Info & Map -->
+                    <div class="space-y-6" data-aos="fade-right">
+                        <div class="bg-white/10 p-6 rounded-lg flex items-start space-x-4">
+                           <div class="text-2xl text-accent mt-1"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h3 class="text-lg font-bold">Our Location</h3>
+                                <p class="text-gray-300">123 Healthway Avenue, Ikeja, Lagos, Nigeria</p>
+                            </div>
+                        </div>
+                         <div class="bg-white/10 p-6 rounded-lg flex items-start space-x-4">
+                           <div class="text-2xl text-accent mt-1"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h3 class="text-lg font-bold">Phone</h3>
+                                <a href="tel:08183696538" class="text-gray-300 hover:text-accent">0818 369 6538</a>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 p-6 rounded-lg flex items-start space-x-4">
+                           <div class="text-2xl text-accent mt-1"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h3 class="text-lg font-bold">Email</h3>
+                                <a href="mailto:aniyunhospital@yahoo.co.uk" class="text-gray-300 hover:text-accent">aniyunhospital@yahoo.co.uk</a>
+                            </div>
+                        </div>
+                        <!-- Google Maps Embed -->
+                        <div class="rounded-lg shadow-lg overflow-hidden h-64 md:h-80">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126844.20211181894!2d3.320498305739894!3d6.548986884638363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c5e93427b37%3A0xe543595e86dcf38a!2sLagos!5e0!3m2!1sen!2sng!4v1676495201193!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <!-- Appointment Form -->
+                    <div class="bg-white p-8 rounded-lg shadow-2xl text-gray-800" data-aos="fade-left">
+                        <h3 class="text-2xl font-bold text-primary-dark mb-6">Request a Callback</h3>
+                        <form action="#" method="POST" class="space-y-5">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                            </div>
+                             <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                            </div>
+                             <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700">Service of Interest</label>
+                                <select id="service" name="service" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                                    <option>General Consultation</option>
+                                    <option>Health Check-up</option>
+                                    <option>Follow-up Visit</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                             <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message (Optional)</label>
+                                <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full bg-accent hover:bg-accent-hover text-white font-bold py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                                    Submit Request
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-white">
+        <div class="container mx-auto px-4 md:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div class="md:col-span-2">
+                    <h4 class="text-xl font-bold mb-4">Aniyun Hospital</h4>
+                    <p class="text-gray-300 leading-relaxed max-w-md">Your trusted partner in health, providing exceptional medical care with a compassionate touch. Serving the Lagos community since our inception.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#services" class="hover:text-accent transition">Services</a></li>
+                        <li><a href="#about" class="hover:text-accent transition">About Us</a></li>
+                        <li><a href="#doctors" class="hover:text-accent transition">Find a Doctor</a></li>
+                        <li><a href="#contact" class="hover:text-accent transition">Contact</a></li>
+                    </ul>
+                </div>
+                 <!-- Social -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Connect With Us</h4>
+                     <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="text-gray-300 hover:text-accent transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-accent transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-accent transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Aniyun Hospital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS (Animate On Scroll) Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- JavaScript for Mobile Menu & Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize AOS
+            AOS.init({
+                duration: 800, // values from 0 to 3000, with step 50ms
+                once: true, // whether animation should happen only once - while scrolling down
+            });
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = mobileMenuButton.querySelector('i');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                // Toggle between bars and x icon
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                } else {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-times');
+                }
+            });
+
+            // Close menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
